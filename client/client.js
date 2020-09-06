@@ -4,10 +4,11 @@ const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
 });
+const PORT = 8877;
 
 rl.question("이름을 입력하세요 : ", name => {
     
-    socket = socket.connect(`http://localhost:3000?name=${name}`);
+    socket = socket.connect(`http://heavyrisem.kro.kr:${PORT}?name=${name}`);
     
     socket.on('join', str => {
         console.log(str);

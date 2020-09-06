@@ -1,0 +1,22 @@
+{
+  "name": "chating",
+  "version": "1.0.0",
+  "description": "Node.js 기반 채팅 어플리케이션입니다.\r Socket.io 기반 통신을 사용합니다.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Heavyrisem/Chating_app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Heavyrisem/Chating_app/issues"
+  },
+  "homepage": "https://github.com/Heavyrisem/Chating_app#readme",
+  "dependencies": {
+    "socket.io": "^2.3.0"
+  }
+}

@@ -1,6 +1,6 @@
 const server = require('http').createServer();
 const io = require('socket.io')(server);
-const PORT = 3000;
+const PORT = 8877;
 
 
 io.on("connection", client => {
