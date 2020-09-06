@@ -9,8 +9,14 @@ const PORT = 8877;
 rl.question("이름을 입력하세요 : ", name => {
     
     socket = socket.connect(`http://heavyrisem.kro.kr:${PORT}?name=${name}`);
-    
-    socket.on('join', str => {
+    socket.on('connect_timeout', err => {
+        console.log(err);
+    });
+    socket.on('connect_error', err => {
+        console.log(err);
+    });
+
+    socket.on('join', str => { 
         console.log(str);
     });
     socket.on('left', str => {
