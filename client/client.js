@@ -7,7 +7,7 @@ const rl = readline.createInterface({
 const PORT = 8877;
 
 rl.question("이름을 입력하세요 : ", name => {
-    
+    rl.prompt();
     socket = socket.connect(`http://heavyrisem.kro.kr:${PORT}?name=${name}`);
     socket.on('connect_timeout', err => {
         console.log(err);
@@ -29,6 +29,7 @@ rl.question("이름을 입력하세요 : ", name => {
     rl.on("line", string => {
         if (string == "") return;
         socket.emit("message", `${name}: ${string}`);
+        rl.prompt();
     });
 
 });
