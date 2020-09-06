@@ -9,7 +9,7 @@ io.on("connection", client => {
     console.log(`${client.handshake.query.name} 님이 접속했습니다.`);
 
     client.on("disconnect", () => {
-        console.log(`${client.handshake.query.name} 님이 접속을 종료했습니다.`);
+        console.log(`${client.handshake.query.name} 님이 접속을 종료했습니다.`)
         io.emit('left', `${client.handshake.query.name} 님이 접속을 종료했습니다.`);
     });
 
